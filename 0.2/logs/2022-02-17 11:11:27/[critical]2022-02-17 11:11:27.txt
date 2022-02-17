@@ -1,0 +1,57 @@
+2022-02-17 11:11:27  {로깅시작}
+2022-02-17 11:11:29  {로그인 성공}
+2022-02-17 11:32:19  탐색된 코인: ['KRW-REP']
+2022-02-17 11:32:23  REP 매수함
+2022-02-17 11:34:20  탐색된 코인: ['KRW-BTC', 'KRW-AXS']
+2022-02-17 11:34:23  BTC 매수함
+2022-02-17 11:34:26  AXS 매수함
+2022-02-17 11:36:25  탐색된 코인: ['KRW-TT', 'KRW-WAXP', 'KRW-STX']
+2022-02-17 11:36:26  TT 매수 보유원화부족
+2022-02-17 11:38:21  탐색된 코인: ['KRW-TT', 'KRW-DAWN']
+2022-02-17 11:38:23  TT 매수 보유원화부족
+2022-02-17 11:40:25  탐색된 코인: ['KRW-TT', 'KRW-WAXP', 'KRW-DAWN']
+2022-02-17 11:40:26  TT 매수 보유원화부족
+2022-02-17 11:42:36  탐색된 코인: ['KRW-WAXP', 'KRW-DAWN']
+2022-02-17 11:42:37  WAXP 매수 보유원화부족
+2022-02-17 11:42:48  매도 오류 발생
+2022-02-17 11:42:48  Traceback (most recent call last):
+  File "/Users/kimyoungjun/cointrader/0.2/Bot.py", line 73, in <module>
+    [sold, log] = max_min_seller(upbit,log)
+  File "/Users/kimyoungjun/cointrader/0.2/sell.py", line 7, in max_min_seller
+    wallet = get_coin_wallet(upbit)
+  File "/Users/kimyoungjun/cointrader/0.2/modules.py", line 54, in get_coin_wallet
+    orders = upbit.get_order('KRW-' + coin)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyupbit/exchange_api.py", line 291, in get_order
+    result = _send_get_request(url, headers=headers, data=data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyupbit/request_api.py", line 66, in _send_get_request
+    resp = requests.get(url, headers=headers, data=data)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
+

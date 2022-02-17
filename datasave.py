@@ -2,6 +2,9 @@ import pyupbit
 import time
 import openpyxl
 
+#TODO 200개 이상 저장하도록 구현
+#TODO 종목 여러개 한번에 하도록 구현
+
 #과거데이터 조회
 count = 200
 data = pyupbit.get_ohlcv(ticker="KRW-BTC", interval="day", count=count)

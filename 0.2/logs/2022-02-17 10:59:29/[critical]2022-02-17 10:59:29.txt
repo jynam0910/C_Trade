@@ -1,0 +1,17 @@
+2022-02-17 10:59:29  {로깅시작}
+2022-02-17 10:59:29  {로그인 성공}
+2022-02-17 11:02:48  탐색된 코인: ['KRW-ARK', 'KRW-CRO']
+2022-02-17 11:02:51  ARK 매수함
+2022-02-17 11:02:54  CRO 매수함
+2022-02-17 11:08:25  탐색 오류 발생
+2022-02-17 11:08:25  Traceback (most recent call last):
+  File "/Users/kimyoungjun/cointrader/0.2/Bot.py", line 42, in <module>
+    found = search2(upbit, excluded_tickers)
+  File "/Users/kimyoungjun/cointrader/0.2/search.py", line 22, in search2
+    moving_average_60 = get_tickers_moving_average(tickers,'close',60,day,timeunit)
+  File "/Users/kimyoungjun/cointrader/0.2/modules.py", line 179, in get_tickers_moving_average
+    data_list = get_history(tickers,200,timeunit)
+  File "/Users/kimyoungjun/cointrader/0.2/modules.py", line 125, in get_history
+    time.sleep(0.05)
+KeyboardInterrupt
+

@@ -13,6 +13,7 @@ def search1(upbit, excluded_tickers):
     return found
 
 def search2(upbit, excluded_tickers):
+    #TODO 가격이 평균선에서 와리가리치는 경우 걸러내야함
     day =100
     timeunit = 'minute30'
     found = []

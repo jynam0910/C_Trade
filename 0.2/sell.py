@@ -11,6 +11,7 @@ def max_min_seller(upbit,log):
         return [[], log]
     sold = []
     for coin in coins:
+        #TODO 매도해야할 종목이 2개 이상인 경우 하나만 매도되는 버그 있음, 20220217114303참조
         avgbought = float(balance[coin]['avg_buy_price'])
         price = pyupbit.get_current_price('KRW-' + coin)
         amount_coin = upbit.get_balance(coin)
@@ -36,6 +37,7 @@ def max_min_seller(upbit,log):
             elif num_order == -99:
                 log = logger(log, 'critical', '주문내역 불러오기 실패')
                 break
+            #TODO 매도 가격 적기
             log = logger(log, 'critical', '[매도주문]  ' + coin)
             [order, log] = make_sell_market_order(upbit, log, coin, amount_coin)
             time.sleep(0.5)
