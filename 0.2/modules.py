@@ -83,8 +83,8 @@ def make_sell_market_order(upbit,log,coin,amount_coin):
     bids_asks = orderbook['orderbook_units']
     if upbit.get_balance(coin) >= amount_coin and amount_coin*bids_asks[0]['bid_price'] > 5050:
         try:
-            order = upbit.sell_market_order('KRW-' + coin, amount_coin)
-            return [order, log]
+            sell_order = upbit.sell_market_order('KRW-' + coin, amount_coin)
+            return [sell_order, log]
         except:
             log = logger(log, 'critical', coin + '  시장가매수 오류발생')
             log = logger(log, 'critical', traceback.format_exc())

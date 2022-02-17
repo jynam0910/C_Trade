@@ -15,7 +15,7 @@ upbit = pyupbit.Upbit(access_key, secret_key)
 # 초기설정
 exclude = ['KRW-BTT','KRW-IQ']
 status = 0
-mode = 'search'
+mode = 'sell'
 
 #로깅시작
 log = start_log()
