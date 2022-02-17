@@ -13,9 +13,9 @@ secret_key = "WlugojbqxP8V7RiZxpY1LrxN9fc6lh84iVxoP8PX"
 upbit = pyupbit.Upbit(access_key, secret_key)
 
 # 초기설정
-exclude = ['KRW-BTT','KRW-IQ']
+exclude = ['KRW-BTC','KRW-BTT','KRW-IQ']
 status = 0
-mode = 'sell'
+mode = 'search'
 
 #로깅시작
 log = start_log()

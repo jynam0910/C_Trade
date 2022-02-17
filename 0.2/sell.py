@@ -14,7 +14,7 @@ def max_min_seller(upbit,log):
         avgbought = float(balance[coin]['avg_buy_price'])
         price = pyupbit.get_current_price('KRW-' + coin)
         amount_coin = upbit.get_balance(coin)
-        min = avgbought * 0.997
+        min = avgbought * 0.98
         max = avgbought * 1.04
         if price > max or price < min:
             time.sleep(5)
