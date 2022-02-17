@@ -3,18 +3,18 @@ import time
 import openpyxl
 
 #과거데이터 조회
-#print(pyupbit.get_ohlcv(ticker="KRW-XRP"))
-data = pyupbit.get_ohlcv(ticker="KRW-BTC", interval="day", count=200)
+count = 200
+data = pyupbit.get_ohlcv(ticker="KRW-BTC", interval="day", count=count)
 #엑셀정리
+now = time.time() - count*24*60*60
 data_list = data.columns.values.tolist() + data.values.tolist()
-#print(data_list)
 wb = openpyxl.Workbook()
 datasheet = wb.worksheets[0]
 for i in range(0,6):
     datasheet.cell(row=1, column=i+2, value=data_list[i])
-for i in range(6,206):
+for i in range(6,6 + count):
     for j in range(0,6):
-        datasheet.cell(row=i-4, column=1, value=i-5)
+        datasheet.cell(row=i-4, column=1, value=time.strftime('%Y-%m-%d %I:%M:%S', time.localtime(now + 24*60*60*(i-5))))
         datasheet.cell(row=i-4, column=j+2, value=data_list[i][j])
 wb.save('test.xlsx')
 
