@@ -1,0 +1,62 @@
+Thu Feb 17 02:34:47 2022  {로깅시작}
+Thu Feb 17 02:34:51 2022  #####현재보유자산#####
+Thu Feb 17 02:34:51 2022  KRW: 24238.18186203
+Thu Feb 17 02:34:51 2022  BTC: 0.00658716 (349172.17728)
+Thu Feb 17 02:34:51 2022  XRP: 100.50251256 (99798.99497207999)
+Thu Feb 17 02:34:51 2022  ETH: 0.02668089 (99546.40058999999)
+Thu Feb 17 02:34:51 2022  SAND: 19.76284584 (98517.78651240001)
+Thu Feb 17 02:34:51 2022  SOL: 0.41034058 (49507.590977)
+Thu Feb 17 02:34:51 2022  ###################
+Thu Feb 17 02:34:51 2022  {로그인 성공}
+Thu Feb 17 02:34:51 2022  {탐색} 전략2
+Thu Feb 17 02:36:03 2022  탐색된 코인이 없음
+Thu Feb 17 02:36:03 2022  {탐색종료}
+Thu Feb 17 02:36:13 2022  {매도}
+Thu Feb 17 02:36:17 2022  매도한 종목 없음
+Thu Feb 17 02:36:17 2022  {매도종료}
+Thu Feb 17 02:36:47 2022  {탐색} 전략2
+Thu Feb 17 02:37:03 2022  탐색 오류 발생
+Thu Feb 17 02:37:03 2022  Traceback (most recent call last):
+  File "/Users/kimyoungjun/PycharmProjects/pythonProject/0.2/Bot.py", line 42, in <module>
+    found = search2(upbit, excluded_tickers)
+  File "/Users/kimyoungjun/PycharmProjects/pythonProject/0.2/search.py", line 20, in search2
+    prices = get_tickers_prices(tickers,'close',day,timeunit)
+  File "/Users/kimyoungjun/PycharmProjects/pythonProject/0.2/modules.py", line 148, in get_tickers_prices
+    data_list = get_history(tickers, length, timeunit)
+  File "/Users/kimyoungjun/PycharmProjects/pythonProject/0.2/modules.py", line 123, in get_history
+    data = pyupbit.get_ohlcv(ticker=ticker, interval=timeunit, count=length)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyupbit/quotation_api.py", line 103, in get_ohlcv
+    contents, req_limit_info = _call_public_api(url, market=ticker, count=query_count, to=to)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pyupbit/request_api.py", line 44, in _call_public_api
+    resp = requests.get(url, params=params)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
+
+Thu Feb 17 02:37:06 2022  3분 이내에 에러 2번 이상 발생
