@@ -13,9 +13,9 @@ secret_key = "WlugojbqxP8V7RiZxpY1LrxN9fc6lh84iVxoP8PX"
 upbit = pyupbit.Upbit(access_key, secret_key)
 
 # 초기설정
-exclude = ['KRW-BTC','KRW-BTT','KRW-IQ']
+exclude = ['KRW-BTT','KRW-IQ']
 status = 0
-mode = 'search'
+mode = 'sell'
 
 #로깅시작
 log = start_log()
@@ -32,7 +32,8 @@ except:
 
 # BOT
 found = []
-error_time = time.time() #3분안에 사소한 에러 두번 발생 시 강제종료
+#TODO 에러타임 구현 오류 있음
+error_time = time.time() #5분안에 사소한 에러 두번 발생 시 강제종료
 while status == 0:
     if mode == 'search':
         found = []

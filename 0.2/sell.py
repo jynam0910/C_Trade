@@ -14,15 +14,13 @@ def max_min_seller(upbit,log):
         avgbought = float(balance[coin]['avg_buy_price'])
         price = pyupbit.get_current_price('KRW-' + coin)
         amount_coin = upbit.get_balance(coin)
-        min = avgbought * 0.98
-        max = avgbought * 1.04
+        min = avgbought * 0.99
+        max = avgbought * 1.02
         if price > max or price < min:
-            time.sleep(5)
             try:
                 num_order = len(order[coin])
             except:
                 num_order = -99
-            time.sleep(5)
             if num_order == 1:
                 uuid = order[coin][0]['uuid']
                 side = order[coin][0]['side']
